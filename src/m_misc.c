@@ -1,6 +1,7 @@
 
 // M_misc.c
 
+#include <SDL2/SDL.h>
 #include "h2stdinc.h"
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -415,10 +416,10 @@ default_t defaults[] =
 
 	{ "key_right",		&key_right,		KEY_RIGHTARROW,	0, 254 },
 	{ "key_left",		&key_left,		KEY_LEFTARROW,	0, 254 },
-	{ "key_up",		&key_up,		KEY_UPARROW,	0, 254 },
-	{ "key_down",		&key_down,		KEY_DOWNARROW,	0, 254 },
-	{ "key_strafeleft",	&key_strafeleft,	',',		0, 254 },
-	{ "key_straferight",	&key_straferight,	'.',		0, 254 },
+	{ "key_up",		&key_up,		KEY_W,	0, 254 },
+	{ "key_down",		&key_down,		KEY_S,	0, 254 },
+	{ "key_strafeleft",	&key_strafeleft,	KEY_A,		0, 254 },
+	{ "key_straferight",	&key_straferight,	KEY_D,		0, 254 },
 	{ "key_flyup",		&key_flyup,		KEY_PGUP,	0, 254 },
 	{ "key_flydown",	&key_flydown,		KEY_INS,	0, 254 },
 	{ "key_flycenter",	&key_flycenter,		KEY_HOME,	0, 254 },
@@ -429,7 +430,7 @@ default_t defaults[] =
 	{ "key_invright",	&key_invright,		']',		0, 254 },
 	{ "key_useartifact",	&key_useartifact,	KEY_ENTER,	0, 254 },
 	{ "key_fire",		&key_fire,		KEY_RCTRL,	0, 254 },
-	{ "key_use",		&key_use,		' ',		0, 254 },
+	{ "key_use",		&key_use,		KEY_SPACEBAR,		0, 254 },
 	{ "key_strafe",		&key_strafe,		KEY_RALT,	0, 254 },
 	{ "key_speed",		&key_speed,		KEY_RSHIFT,	0, 254 },
 

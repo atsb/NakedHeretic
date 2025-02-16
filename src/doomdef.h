@@ -111,6 +111,12 @@ extern	byte	*destview, *destscreen;	/* PC direct to screen pointers */
 #define	KEY_LEFTARROW		130
 #define	KEY_RIGHTARROW		131
 
+#define KEY_W        SDLK_w
+#define KEY_S        SDLK_s
+#define KEY_A        SDLK_a
+#define KEY_D        SDLK_d
+#define KEY_SPACEBAR SDLK_SPACE
+
 #define	KEY_ALT			132
 #define	KEY_LALT		KEY_ALT
 #define	KEY_RALT		KEY_ALT
@@ -255,8 +261,8 @@ typedef struct
 
 typedef struct
 {
-	char		forwardmove;		// *2048 for move
-	char		sidemove;			// *2048 for move
+	int			forwardmove;		// *2048 for move
+	int			sidemove;			// *2048 for move
 	short		angleturn;			// <<16 for angle delta
 	short		consistancy;		// checks for net game
 	byte		chatchar;
@@ -829,10 +835,9 @@ extern	boolean		autostart;
 ===============================================================================
 */
 
-
-fixed_t	FixedMul (fixed_t a, fixed_t b);
-fixed_t	FixedDiv (fixed_t a, fixed_t b);
-fixed_t	FixedDiv2 (fixed_t a, fixed_t b);
+fixed_t FixedMul (fixed_t a, fixed_t b);
+fixed_t FixedDiv (fixed_t a, fixed_t b);
+fixed_t FixedDiv2 (fixed_t a, fixed_t b);
 
 #define FIX2FLT(x)	((float)((x)>>FRACBITS) + (float)((x)&(FRACUNIT-1)) / (float)(FRACUNIT))
 #define Q_FIX2FLT(x)	((float)((x)>>FRACBITS))
